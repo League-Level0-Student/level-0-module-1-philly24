@@ -24,15 +24,32 @@ import org.jointheleague.graphical.robot.Robot;
 
 	private void moveRobot(int keyPressed) throws InterruptedException {
 	    // 2. Print out the keyPressed variable and write down the numbers for each arrow key
-
+System.out.println(keyPressed);
 	    // 3. If the up arrow is pressed, move the Robot up the screen.
-		
+		//up 38
+        //down 40
+        //right 39
+        //left 37
+if (keyPressed==38) {
+ rob.microMove(2);
+}
 	    // 4. If the down arrow is pressed, move the Robot down.
-
+if (keyPressed==40) {
+	rob.setAngle(180);
+	rob.microMove(2);
+	
+}
 	    // 5. If the left arrow is pressed, make the Robot go left.
 	   
+if (keyPressed== 37) {
+		rob.setAngle(270);
+       rob.microMove(2);	
+}
 	    // 6. If right is pressed, move the Robot right.
-	    
+	    if (keyPressed==39) {
+			rob.setAngle(90);
+			rob.microMove(2);
+		}
 	    // 7. Run your program and move the Robot to RD-2D for a surprise! 
 	}
 
